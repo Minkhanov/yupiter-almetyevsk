@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" role="img" aria-label="Герб ООО «Юпитер»: планета с кольцом над строящимся домом и башенным краном">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" role="img" aria-label="Герб ООО «Юпитер»: две крыши на щите">
   <defs>
     <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#23292F"/>
+      <stop offset="0" stop-color="#242A30"/>
       <stop offset="1" stop-color="#0B0D10"/>
     </linearGradient>
     <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
@@ -9,51 +9,29 @@
       <stop offset=".5" stop-color="#F5A623"/>
       <stop offset="1" stop-color="#B8611E"/>
     </linearGradient>
-    <linearGradient id="planet" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFE3A8"/>
-      <stop offset=".22" stop-color="#F5A623"/>
-      <stop offset=".38" stop-color="#FCD58A"/>
-      <stop offset=".55" stop-color="#D9772B"/>
-      <stop offset=".7" stop-color="#F3B866"/>
-      <stop offset=".86" stop-color="#B5501F"/>
-      <stop offset="1" stop-color="#7A3413"/>
+    <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFC857"/>
+      <stop offset="1" stop-color="#F08A1C"/>
     </linearGradient>
-    <radialGradient id="shade" cx=".35" cy=".3" r=".8">
-      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
-      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#000" stop-opacity=".55"/>
-    </radialGradient>
-    <clipPath id="clipPlanet"><circle cx="120" cy="104" r="46"/></clipPath>
   </defs>
   <!-- щит -->
   <path d="M120 6 226 30v96c0 70-46 122-106 148C60 248 14 196 14 126V30Z" fill="url(#shield)" stroke="url(#rim)" stroke-width="5"/>
   <path d="M120 20 212 41v85c0 61-39 107-92 131-53-24-92-70-92-131V41Z" fill="none" stroke="#F5A623" stroke-opacity=".28" stroke-width="1.2"/>
-  <g transform="translate(0,-12)">
-  <!-- кольцо сзади -->
-  <ellipse cx="120" cy="104" rx="78" ry="17" transform="rotate(-14 120 104)" fill="none" stroke="#F5A623" stroke-opacity=".55" stroke-width="3"/>
-  <!-- планета -->
-  <g clip-path="url(#clipPlanet)">
-    <rect x="70" y="56" width="100" height="100" fill="url(#planet)"/>
-    <ellipse cx="136" cy="116" rx="11" ry="6" fill="#8E3A14" opacity=".75"/>
-    <rect x="70" y="56" width="100" height="100" fill="url(#shade)"/>
+  <!-- две крыши, как в логотипе компании -->
+  <g fill="none" stroke-linejoin="miter" stroke-linecap="square">
+    <path d="M44 130 98 78l54 52" stroke="url(#roof)" stroke-width="13"/>
+    <path d="M118 130l42-40 38 40" stroke="#F4EDE1" stroke-width="10"/>
+    <path d="M176 92v-18h12v30" stroke="#F4EDE1" stroke-width="6"/>
   </g>
-  <!-- кольцо спереди -->
-  <path d="M44.6 123.4c7.5 12.7 81.2 1.7 151.9-37.8" fill="none" stroke="url(#rim)" stroke-width="4" stroke-linecap="round" transform="rotate(0)"/>
-  </g>
-  <g transform="translate(0,-24)">
-  <!-- стройка: дом, кран -->
+  <!-- окна под крышами -->
   <g fill="#F4EDE1">
-    <path d="M58 214h124v5H58z" opacity=".9"/>
-    <path d="M70 214v-30h26v30zM100 214v-44h30v44zM134 214v-24h24v24z" opacity=".92"/>
-    <path d="M75 190h6v6h-6zM85 190h6v6h-6zM105 176h6v6h-6zM119 176h6v6h-6zM105 188h6v6h-6zM119 188h6v6h-6zM105 200h6v6h-6zM119 200h6v6h-6zM139 196h6v6h-6zM148 196h6v6h-6z" fill="#0B0D10"/>
+    <rect x="88" y="108" width="9" height="9"/><rect x="100" y="108" width="9" height="9"/>
+    <rect x="88" y="120" width="9" height="9"/><rect x="100" y="120" width="9" height="9"/>
+    <rect x="152" y="114" width="7" height="7" fill="#F5A623"/><rect x="162" y="114" width="7" height="7" fill="#F5A623"/>
   </g>
-  <g stroke="#F5A623" stroke-width="2.4" fill="none" stroke-linecap="round">
-    <path d="M168 214v-66M168 150h-52M168 150h14M168 150l-10-10M162 150l6-8 6 8"/>
-    <path d="M124 150v14"/>
-  </g>
-  <rect x="120" y="164" width="8" height="6" fill="#F5A623"/>
-  </g>
+  <path d="M40 142h160" stroke="#F5A623" stroke-opacity=".6" stroke-width="2"/>
   <!-- надпись -->
-  <text x="120" y="221" text-anchor="middle" font-family="Unbounded, Arial Black, sans-serif" font-weight="800" font-size="19" letter-spacing="1.5" fill="url(#rim)">ЮПИТЕР</text>
-  <text x="120" y="236" text-anchor="middle" font-family="Golos Text, Arial, sans-serif" font-weight="600" font-size="7.5" letter-spacing="3" fill="#9AA7B2">АЛЬМЕТЬЕВСК</text>
+  <text x="120" y="184" text-anchor="middle" font-family="Unbounded, Arial Black, sans-serif" font-weight="800" font-size="27" letter-spacing="1.5" fill="url(#rim)">ЮПИТЕР</text>
+  <text x="120" y="207" text-anchor="middle" font-family="Golos Text, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#C9D1D8">СТРОИТЕЛЬНАЯ</text>
+  <text x="120" y="222" text-anchor="middle" font-family="Golos Text, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#C9D1D8">КОМПАНИЯ</text>
 </svg>

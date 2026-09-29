@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://minkhanov.github.io/yupiter-almetyevsk/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0E1114">
-<link rel="icon" href="assets/img/emblema.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/znak.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 :root{
@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none}
 .nav.is-solid{background:rgba(14,17,20,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line-2)}
 .nav-in{max-width:var(--wrap);margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:28px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{width:38px;height:44px}
+.brand img{width:42px;height:42px}
 .brand b{font:800 18px/1 var(--display);letter-spacing:.06em;display:block}
 .brand small{display:block;font:600 10px/1.4 var(--sans);letter-spacing:.24em;color:var(--muted);margin-top:4px}
 .nav-links{display:flex;gap:26px;margin-left:auto;font-size:15px;color:var(--steel)}
@@ -176,6 +176,11 @@ h2{font:800 clamp(28px,4vw,50px)/1.1 var(--display);letter-spacing:-.015em;margi
 .lnk{color:var(--amber);border-bottom:1px dashed rgba(245,166,35,.5)}
 .contact-line a{border-bottom:1px dashed rgba(169,180,190,.4)}
 
+.director{display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;margin-bottom:22px;padding:30px 34px;border-radius:var(--r);border:1px solid var(--line);background:radial-gradient(70% 120% at 0% 0%,rgba(245,166,35,.16),transparent 60%),linear-gradient(160deg,var(--concrete-2),var(--bg-2))}
+.dir-mono{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font:800 28px/1 var(--display);color:#17110A;background:linear-gradient(135deg,#FFD27A,var(--amber) 50%,var(--orange));box-shadow:0 0 0 6px rgba(245,166,35,.12)}
+.dir-role{display:block;font:600 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+.dir-name{display:block;font:800 clamp(20px,2.4vw,28px)/1.2 var(--display);margin-bottom:10px}
+.dir-text p{color:var(--steel);font-size:15.5px;max-width:620px}
 /* этапы */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:st}
 .step{padding:28px 24px;border-radius:var(--r);border:1px solid var(--line-2);background:var(--bg-2);position:relative}
@@ -230,6 +235,8 @@ footer{border-top:1px solid var(--line-2);padding:34px 0 40px;color:var(--muted)
   .hero-emblem{width:160px}
   .hero-cta .btn{width:100%}
   .req{grid-template-columns:1fr;gap:2px}
+  .director{grid-template-columns:1fr;text-align:left;padding:24px}
+  .dir-btn{width:100%}
   .req dd{margin-bottom:10px}
   .card{padding:24px}
   .joke .stamp{display:none}
@@ -245,7 +252,7 @@ footer{border-top:1px solid var(--line-2);padding:34px 0 40px;color:var(--muted)
 <nav class="nav" id="nav">
   <div class="nav-in">
     <a class="brand" href="#top" aria-label="ООО «Юпитер» — наверх">
-      <img src="assets/img/emblema.svg" alt="">
+      <img src="assets/img/znak.svg" alt="">
       <span><b>ЮПИТЕР</b><small>СТРОИТЕЛЬНАЯ КОМПАНИЯ</small></span>
     </a>
     <div class="nav-links">
@@ -275,7 +282,7 @@ footer{border-top:1px solid var(--line-2);padding:34px 0 40px;color:var(--muted)
 <header class="hero" id="hero">
   <canvas id="blueprint" aria-hidden="true"></canvas>
   <div class="hero-in wrap">
-    <img class="hero-emblem" data-hero src="assets/img/emblema.svg" alt="Герб ООО «Юпитер»: планета с кольцом над строящимся домом">
+    <img class="hero-emblem" data-hero src="assets/img/emblema.svg" alt="Герб ООО «Юпитер»: две крыши на щите">
     <span class="tag" data-hero><i></i>Альметьевск · Республика Татарстан</span>
     <h1 data-hero>Строим <span class="amber-text">по&nbsp;договору,</span><span class="l2">сдаём по&nbsp;акту</span></h1>
     <p class="hero-sub" data-hero><!--HERO_SUB-->Строительная компания из&nbsp;Альметьевска: <b>дома и&nbsp;коттеджи под&nbsp;ключ</b>&nbsp;— от&nbsp;проекта и&nbsp;сметы до&nbsp;отделки. В&nbsp;реестре подрядчиков ДОМ.РФ, строим с&nbsp;оплатой через эскроу-счёт в&nbsp;Сбербанке.<!--/HERO_SUB--></p>
@@ -556,20 +563,29 @@ footer{border-top:1px solid var(--line-2);padding:34px 0 40px;color:var(--muted)
       <span class="eyebrow"><i>05</i>Контакты</span>
       <h2>Обсудим <span class="amber-text">ваш объект</span></h2>
     </div>
+    <div class="director reveal">
+      <div class="dir-mono" aria-hidden="true">АМ</div>
+      <div class="dir-text">
+        <span class="dir-role">Директор ООО&nbsp;«Юпитер»</span>
+        <b class="dir-name">Минханов Азат Акдясович</b>
+        <p>Руководит компанией с&nbsp;основания в&nbsp;2020 году, единственный учредитель. Лично отвечает за&nbsp;смету, сроки и&nbsp;сдачу каждого дома.</p>
+      </div>
+      <a class="btn btn-main dir-btn" href="tel:+79534876005">Позвонить директору</a>
+    </div>
     <div class="contacts">
       <div class="card reveal">
         <h3>Реквизиты</h3>
         <dl class="req">
 <!--REKVIZITY-->
-          <dt>Наименование</dt><dd>ООО «ЮПИТЕР»</dd>
+          <dt>Полное наименование</dt><dd>Общество с&nbsp;ограниченной ответственностью «ЮПИТЕР»</dd>
+          <dt>Сокращённое</dt><dd>ООО «ЮПИТЕР»</dd>
           <dt>Директор</dt><dd>Минханов Азат Акдясович</dd>
-          <dt>ИНН</dt><dd>1644096906</dd>
-          <dt>КПП</dt><dd>164401001</dd>
-          <dt>ОГРН</dt><dd>1201600047439</dd>
+          <dt>ИНН / КПП</dt><dd>1644096906 / 164401001</dd>
+          <dt>ОГРН</dt><dd>1201600047439 от&nbsp;13.07.2020</dd>
           <dt>ОКПО</dt><dd>44789460</dd>
-          <dt>Регистрация</dt><dd>13.07.2020</dd>
-          <dt>Город</dt><dd>Альметьевск, Республика Татарстан</dd>
+          <dt>Юридический адрес</dt><dd>423451, Республика Татарстан, г.&nbsp;Альметьевск, ул.&nbsp;8&nbsp;Марта, д.&nbsp;4, кв.&nbsp;31</dd>
           <dt>Основной ОКВЭД</dt><dd>41.20 Строительство жилых и&nbsp;нежилых зданий</dd>
+          <dt>Уставный капитал</dt><dd>10&nbsp;000&nbsp;₽</dd>
           <dt>ДОМ.РФ</dt><dd><a class="lnk" href="https://xn--h1aieheg.xn--d1aqf.xn--p1ai/contractor/16509" target="_blank" rel="noopener">подрядчик ИЖС №&nbsp;16509, «Проверено ДОМ.РФ»</a></dd>
 <!--/REKVIZITY-->
         </dl>
@@ -594,7 +610,7 @@ footer{border-top:1px solid var(--line-2);padding:34px 0 40px;color:var(--muted)
 
 <footer>
   <div class="wrap foot">
-    <span>© <span id="y">2026</span> ООО «Юпитер», Альметьевск</span>
+    <span>© <span id="y">2026</span> ООО «Юпитер», Альметьевск · ИНН 1644096906 · Директор&nbsp;— Минханов Азат Акдясович</span>
     <span>Сайт сделан в&nbsp;<a href="https://sherkhanmm.ru" target="_blank" rel="noopener">SHERKHAN&nbsp;MM</a></span>
   </div>
 </footer>
